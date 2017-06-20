@@ -1,0 +1,22 @@
+{{ partial "header.html" . }}
+
+<main class="contents container">
+  <section class="posts">
+    {{ $paginator := .Paginate (where .Data.Pages "Type" "post") }}
+      {{ range $paginator.Pages }}
+        {{ .Render "li" }}
+    {{ end }}
+
+    <div class="pagination">
+      {{ if .Paginator.HasPrev }}
+        <a href="{{ .Paginator.Prev.URL }}" class="prev">Prev</a>
+      {{ end }}
+      {{ if .Paginator.HasNext }}
+      <a href="{{ .Paginator.Next.URL }}" class="next">Next</a>
+      {{ end }}
+      <div class="page-numbers">Page {{ .Paginator.PageNumber }} of {{ .Paginator.TotalPages }}</div>
+    </div>
+  </section>
+</main>
+
+{{ partial "footer.html" . }}

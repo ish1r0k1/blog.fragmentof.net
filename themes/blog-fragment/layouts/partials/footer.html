@@ -1,0 +1,30 @@
+  <footer class="global-footer">
+    <div class="global-footer-center">
+      <div class="global-footer__links">
+        <ul class="menu">
+          {{with .Site.Params.twitter}}
+            <li class="menu__item"><a href="https://twitter.com/{{.}}" target="_blank">Twitter</a></li>
+          {{end}}
+
+          {{with .Site.Params.facebook}}
+            <li class="menu__item"><a href="https://www.facebook.com/{{.}}" target="_blank">Facebook</a></li>
+          {{end}}
+
+          {{with .Site.Params.github}}
+            <li class="menu__item"><a href="https://github.com/{{.}}" target="_blank">GitHub</a></li>
+          {{end}}
+
+          {{with .Site.Params.email}}
+            <li class="menu__item"><a href="mailto:{{.}}">Email</a></li>
+          {{end}}
+
+          <li class="menu__item"><a href="{{ .Site.RSSLink }}" target="_blank">RSS</a></li>
+        </ul>
+      </div>
+
+      <small class="global-footer__copyright">&copy;{{ .Site.LastChange.Format "2006" }} {{ .Site.Title }}</small>
+    </div>
+  </footer>
+  <script src="{{ .Site.BaseURL }}javascripts/bundle.js"></script>
+</body>
+</html>

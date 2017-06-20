@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+{{ partial "head.html" . }}
+
+<body>
+<header class="global-header">
+  <h1 class="site-title">
+    <a href=""><img src="{{ .Site.BaseURL }}images/logo.png" height="30" alt="{{ .Site.Title }}"></a>
+  </h1>
+  <nav class="global-navigation">
+    <ul class="menu">
+      <li class="menu__item"><a href="{{ .Site.RSSLink }}" target="_blank">RSS</a></li>
+    </ul>
+  </nav>
+</header>

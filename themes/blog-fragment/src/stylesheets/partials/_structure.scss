@@ -1,0 +1,74 @@
+@charset "utf-8";
+
+// Initialize
+//////////////////////////////
+
+// html { font-size: 62.5%; }
+
+body {
+  line-height: 1.88;
+  font-family: $ff_gothic;
+  letter-spacing: .03em;
+  font-size: $fz_normal;
+  color: $font-color;
+}
+
+// Typography
+//////////////////////////////
+h1, h2, h3, h4, h5, h6 {
+  font-weight: 700;
+  margin-bottom: 36px;
+}
+
+h1, .h1 { font-size: 35px; line-height: 1.2; }
+h2, .h2 { font-size: 28px; line-height: 1.25; }
+h3, .h3 { font-size: 25px; line-height: 1.3; }
+h4, .h4 { font-size: 21px; line-height: 1.35; }
+h5, .h5 { font-size: 18px; line-height: 1.5; }
+h6, .h6 { font-size: 15px; line-height: 1.4; }
+
+p { margin-bottom: 36px; }
+
+
+
+// Links
+//////////////////////////////
+a {
+  color: $link-color;
+
+  &:hover {
+    color: lighten($link-color, 5%);
+  }
+}
+
+
+// Misc
+//////////////////////////////
+img { vertical-align: top; }
+
+ul, ol { list-style: none; }
+
+small { font-size: 100%; }
+
+input,
+textarea { outline: none; }
+
+
+// Utilities
+//////////////////////////////
+.cf {
+  zoom: 1;
+
+  &:before {
+    content: '';
+    display: table;
+  }
+
+  &:after {
+    @extend .cf:before;
+    clear: both;
+  }
+}
+
+.inconsolata { font-family: $ff_inconsolata, monospace; }
+.openSans { font-family: $ff_openSans; }

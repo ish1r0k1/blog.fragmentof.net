@@ -1,0 +1,17 @@
+baseurl = "http://localhost:3000/"
+languageCode = "ja-jp"
+title = "FRAGMENT"
+theme = "blog-fragment"
+isCJKLanguage = true
+
+[params]
+twitter = "ish1r0k1"
+github = "ish1r0k1"
+email = "ishiwatari@fragmentof.net"
+
+[author]
+  name = "Hiroki Ishiwatari"
+
+[params.meta]
+  keywords = "blog, tech"
+  description = "Personal blog."

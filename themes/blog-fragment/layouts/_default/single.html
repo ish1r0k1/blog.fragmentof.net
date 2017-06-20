@@ -1,0 +1,28 @@
+{{ partial "header.html" . }}
+
+<main class="contents container">
+  <article class="post">
+    <h1 class="post__title">{{ .Title }}</h1>
+    <div class="post-meta">
+      <div class="post-meta__item">
+        <date class="post-date">{{ .Date.Format "2006/6/2" }}</date>
+      </div>
+      <div class="post-meta__item">
+        <ul class="post-tags">
+          {{ range .Params.tags }}
+          <li class="post-tags__item"><a href="/tags/{{.}}">{{.}}</a></li>
+          {{ end }}
+        </ul>
+      </div>
+    </div>
+    <div class="post__body">
+      {{ .Content }}
+    </div>
+   {{ partial "social.html" . }}
+  </article>
+  <div class="pagination">
+    <a href="" class="back">Back to list</a>
+  </div>
+</main>
+
+{{ partial "footer.html" . }}

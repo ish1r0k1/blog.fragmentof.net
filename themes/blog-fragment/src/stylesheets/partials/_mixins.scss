@@ -1,0 +1,30 @@
+@charset "utf-8";
+
+// Mixin
+//////////////////////////////
+@mixin hover($n, $sec: .3s, $easing: ease) {
+  transition: opacity $sec $easing;
+
+  &:hover { opacity: $n; }
+}
+
+@mixin gradient($from, $to) {
+  background: $from;
+  background: -webkit-gradient(linear, left top, left bottom color-stop(0, $from), color-stop(1, $from), color-stop(1, $to));
+  background: linear-gradient(to bottom, $from 0%, $from 50%, $to 100%);
+}
+
+@mixin mq($size) {
+  @if $size == xs {
+    @media only screen and (max-width: $bp-larger-than-mobile) { @content; }
+  }
+  @else if $size == sm {
+    @media only screen and (max-width: $bp-larger-than-tablet) { @content; }
+  }
+  @else if $size == md {
+    @media only screen and (max-width: $bp-larger-than-desktop) { @content; }
+  }
+  @else if $size == lg {
+    @media only screen and (min-width: $bp-larger-than-desktophd) { @content; }
+  }
+}

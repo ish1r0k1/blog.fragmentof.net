@@ -1,0 +1,8 @@
+{{ $title := .Title }}
+{{ $siteTitle := .Site.Title }}
+{{ $authorName := .Site.Author.name }}
+{{ if .IsHome }}
+  {{ $siteTitle }}
+{{ else }}
+  {{ if .Params.heading }} {{ .Params.heading }} {{ else }} {{ .Title }} - {{ .Site.Title }} {{ end }}
+{{ end }}

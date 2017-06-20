@@ -1,0 +1,52 @@
+@charset "utf-8";
+
+// Variables
+//////////////////////////////
+
+// ======== Breakpoints ========
+$bp-larger-than-mobile    : 480px !default;
+$bp-larger-than-tablet    : 768px !default;
+$bp-larger-than-desktop   : 1024px !default;
+$bp-larger-than-desktophd : 1200px !default;
+
+// ======== Colors ========
+$white: #fff;
+$black: #212121;
+$gray: #707070;
+$border-gray: #d6d6d6;
+$off-white: #f5f5f5;
+
+$primary-color: tomato;
+$font-color: $black;
+$link-color: $font-color;
+
+// SNS
+$facebook-blue: #3B5998;
+$hatebu-blue: #008FDE;
+$twitter-blue: #55ACEE;
+$line-green: #00c300;
+$gp-red: #dd4b39;
+
+// Typography
+$ff_gothic: "Helvetica Neue", Helvetica, Arial, "ヒラギノ角ゴ ProN W3", "Hiragino Kaku Gothic ProN", "メイリオ", Meiryo, sans-serif;
+$ff_gothic_sp: Verdana, Roboto, "Droid Sans", "游ゴシック", YuGothic, "ヒラギノ角ゴ ProN W3", "Hiragino Kaku Gothic ProN", "メイリオ", Meiryo, sans-serif;
+$ff_mincho: "游明朝",YuMincho,"ヒラギノ明朝 ProN W3","Hiragino Mincho ProN","HG明朝","ＭＳ Ｐ明朝","ＭＳ 明朝",serif;
+$ff_inconsolata: 'Inconsolata', monospace;
+$ff_openSans: 'Open Sans', sans-serif;
+
+// $fz_largest : 42px;
+// $fz_larger: 30px;
+// $fz_large: 24px;
+// $fz_medium: 18px;
+$fz_normal: 16px;
+$fz_small: 14px;
+// $fz_smaller : 10px;
+
+// Index
+//////////////////////////////
+// snippets: z-index: index($z, header);
+$z: header, footer, content;
+
+// Sizes
+//////////////////////////////
+$mw: 864px; // max width

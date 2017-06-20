@@ -1,0 +1,12 @@
+name = "Blog Fragment"
+license = "MIT"
+licenselink = "https://github.com/ish1r0k1/blog.fragmentof.net/blob/master/LICENSE.md"
+description = "ish1r0k1's blog theme."
+homepage = "https://github.com/ish1r0k1"
+tags = ["blog", minimal"]
+features = ["blog"]
+min_version = 0.14
+
+[author]
+  name = "ish1r0k1"
+  homepage = "https://github.com/ish1r0k1"

@@ -1,0 +1,170 @@
+@charset "utf-8";
+
+/* Layout
+ *************************/
+.contents {
+  padding: 76px 0;
+  min-height: calc(100vh - 88px - 78px); // window - header - footer
+}
+
+.container {
+  max-width: $mw;
+  margin: 0 auto;
+  position: relative;
+}
+
+/* Header
+ *************************/
+.global-header {
+  @extend .container;
+  @extend .col-10;
+
+  .site-title {
+    position: absolute;
+    top: 50%;
+    left: 0;
+    transform: translate(0, -50%);
+  }
+}
+
+.global-navigation {
+  text-align: right;
+  font-size: 0;
+
+  .menu {
+    display: inline-block;
+    font-size: $fz_normal;
+
+    &__item {
+      padding-top: 29px;
+      padding-bottom: 29px;
+      margin-left: 34px;
+      float: left;
+    }
+
+    a {
+      position: relative;
+
+      &:after {
+        content: '';
+        position: absolute;
+        bottom: -6px;
+        left: 0;
+        width: 0;
+        height: 1px;
+        background: $black;
+      }
+
+      &:hover {
+        &:after {
+          width: 100%;
+          transition: width .36s ease;
+        }
+      }
+    }
+  }
+}
+
+/* Footer
+ *************************/
+.global-footer {
+  background: $black;
+  color: $gray;
+  padding: 24px 0;
+
+  a {
+    color: $gray;
+
+    &:hover { color: $white; }
+  }
+}
+
+.global-footer-center {
+  @extend .col-10;
+  max-width: $mw;
+  margin: 0 auto;
+  position: relative;
+}
+
+.global-footer__links {
+  .menu {
+    @extend .cf;
+
+    @include mq(sm) {
+      margin-bottom: 16px;
+      margin-right: -16px;
+      text-align: center;
+    }
+
+    &__item {
+      float: left;
+      margin-right: 16px;
+
+      @include mq(sm) {
+        float: none;
+        display: inline-block;
+      }
+    }
+  }
+}
+
+.global-footer__copyright {
+  @extend .inconsolata;
+  position: absolute;
+  top: 50%;
+  right: 0;
+  transform: translate(0, -50%);
+  text-transform: uppercase;
+  font-size: $fz_small;
+
+  @include mq(sm) {
+    text-align: center;
+    position: relative;
+    top: auto;
+    right: auto;
+    transform: initial;
+    display: block;
+    text-align: center;
+  }
+}
+
+/* Post
+ *************************/
+@import "_post.scss";
+
+/* Error
+ *************************/
+@import "_error.scss";
+
+/* Modules
+ *************************/
+.menu { @extend .inconsolata; }
+.menu__item { }
+
+.link {
+  position: relative;
+  display: inline-block;
+
+  &:hover {
+    &:after {
+      transition: width .36s ease;
+      width: 100%;
+    }
+  }
+
+  &:before,
+  &:after {
+    content: '';
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    height: 1px;
+    background: $border-gray;
+  }
+
+  &:after {
+    background: $black;
+    width: 0;
+  }
+}
