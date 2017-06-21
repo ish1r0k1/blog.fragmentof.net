@@ -1,5 +1,5 @@
 {{ if .Description }}
-  {{ . }}
+  {{ .Description }}
 {{ else if .IsPage }}
   {{ .Summary }}
 {{ else }}
