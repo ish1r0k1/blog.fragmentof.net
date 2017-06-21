@@ -4,8 +4,10 @@
   "description": "",
   "main": "gulpfile.js",
   "scripts": {
-    "start": "gulp",
-    "build": "gulp --env=production"
+    "start": "hugo server -D -w",
+    "build": "hugo",
+    "dev": "gulp",
+    "theme-build": "gulp --env=production"
   },
   "author": "Hiroki Ishiwatari",
   "license": "MIT",
