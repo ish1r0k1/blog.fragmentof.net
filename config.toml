@@ -1,4 +1,4 @@
-baseurl = "http://localhost:3000/"
+baseurl = "http://blog.fragmentof.net/"
 languageCode = "ja-jp"
 title = "FRAGMENT"
 theme = "blog-fragment"
