@@ -160,7 +160,7 @@ gulp.task("default", () => {
   if (!isProduction) {
     runSequence("clean", ["styles", "scripts"], "build", "serve", "watch");
   } else {
-    runSequence("clean", ["styles", "scripts"], "build", "minify");
+    runSequence("clean", ["styles", "scripts"], "build");
   }
 });
 

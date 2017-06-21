@@ -207,3 +207,25 @@
 
   .page-numbers { }
 }
+
+.social {
+  font-size: 0;
+
+  &__item {
+    display: inline-block;
+    margin-right: 8px;
+
+    &--fb {
+      position: relative;
+      top: 10px;
+    }
+
+    &--tw {
+
+    }
+
+    &--htb {
+
+    }
+  }
+}
