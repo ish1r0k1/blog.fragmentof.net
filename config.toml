@@ -8,6 +8,7 @@ isCJKLanguage = true
 twitter = "ish1r0k1"
 github = "ish1r0k1"
 email = "ishiwatari@fragmentof.net"
+googleAnalytics = "UA-79199286-3"
 
 [author]
   name = "Hiroki Ishiwatari"
