@@ -28,6 +28,11 @@
       }
     }
   }
+
+  @include mq(sm) {
+    padding-bottom: 48px;
+    margin-bottom: 48px;
+  }
 }
 
 .post-meta {
@@ -157,7 +162,7 @@
 .pagination {
   @extend .openSans;
   position: relative;
-  width: $mw/2;
+  max-width: $mw/2;
   margin: 0 auto;
   text-transform: uppercase;
   text-align: center;
